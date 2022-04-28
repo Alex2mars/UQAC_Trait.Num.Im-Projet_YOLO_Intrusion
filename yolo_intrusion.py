@@ -1,6 +1,3 @@
-import time
-from math import floor
-
 import cv2
 
 import yolo_img
@@ -8,8 +5,7 @@ import yolo_img
 net, output_layers = yolo_img.load_yolo()
 classes, colors_dict = yolo_img.class_color_dict("coco.names")
 
-vid_name = "test_webcam"
-
+vid_name = "intrus_salon"
 camera = cv2.VideoCapture(vid_name + ".mp4")
 
 n_frames = camera.get(cv2.CAP_PROP_FRAME_COUNT)
